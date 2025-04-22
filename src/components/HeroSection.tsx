@@ -1,6 +1,8 @@
 import { motion } from 'framer-motion';
 import { ArrowDownTrayIcon, ChatBubbleBottomCenterTextIcon } from '@heroicons/react/24/outline';
 import profileImg from '../assets/profile.png';
+import CV from '../assets/CV SUPTO FINAL.pdf';
+
 const HeroSection = () => {
   const scrollToContact = () => {
     const contactSection = document.getElementById('contact');
@@ -8,7 +10,7 @@ const HeroSection = () => {
   };
 
   const handleDownloadCV = () => {
-    window.open('/src/assets/CV SUPTO FINAL.pdf', '_blank');
+    window.open(CV, '_blank');
   };
 
   return (
