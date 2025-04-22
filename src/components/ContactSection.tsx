@@ -32,10 +32,10 @@ const socialLinks = [
 ];
 
 const ContactSection = () => {
-  const handleSubmit = (e: React.FormEvent) => {
-    e.preventDefault();
-    // Add form submission logic here
-  };
+  // const handleSubmit = (e: React.FormEvent) => {
+  //   e.preventDefault();
+  //   // Add form submission logic here
+  // };
 
   return (
     <section className="py-20 px-4 max-w-6xl mx-auto" id="contact">
