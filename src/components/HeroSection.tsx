@@ -1,6 +1,6 @@
 import { motion } from 'framer-motion';
 import { ArrowDownTrayIcon, ChatBubbleBottomCenterTextIcon } from '@heroicons/react/24/outline';
-
+import profileImg from '../assets/profile.png';
 const HeroSection = () => {
   const scrollToContact = () => {
     const contactSection = document.getElementById('contact');
@@ -64,7 +64,7 @@ const HeroSection = () => {
         >
           <div className="relative w-64 h-64 md:w-80 md:h-80">
             <img
-              src="/src/assets/image.png"
+              src={profileImg}
               alt="Profile"
               className="rounded-2xl object-cover w-full h-full shadow-xl ring-4 ring-accent/20"
             />
