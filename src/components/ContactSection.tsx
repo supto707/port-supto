@@ -6,8 +6,8 @@ import { MdEmail } from 'react-icons/md';
 const contactInfo = [
   {
     icon: PhoneIcon,
-    value: '+8807324029937',
-    href: 'tel:+8807324029937',
+    value: '+8801324029937',
+    href: 'tel:+8801324029937',
     label: 'Phone',
   },
   {
