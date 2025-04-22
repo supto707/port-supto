@@ -1,54 +1,72 @@
-# React + TypeScript + Vite
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+# 🌐 Personal Developer Portfolio - [Visit Live Site](https://portfolio-supto.netlify.app/)
 
-Currently, two official plugins are available:
+Welcome to my personal portfolio website! This is where I showcase my skills, projects, and experiences as a frontend developer. Built with modern technologies like **React**, **Tailwind CSS**, and **Framer Motion**, the goal of this portfolio is to reflect my creative side while keeping things clean, functional, and user-friendly.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+![Portfolio Banner](https://portfolio-supto.netlify.app/preview-image.png) <!-- Optional: You can upload an image or preview GIF here -->
 
-## Expanding the ESLint configuration
+---
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+## 🚀 Features
 
-```js
-export default tseslint.config({
-  extends: [
-    // Remove ...tseslint.configs.recommended and replace with this
-    ...tseslint.configs.recommendedTypeChecked,
-    // Alternatively, use this for stricter rules
-    ...tseslint.configs.strictTypeChecked,
-    // Optionally, add this for stylistic rules
-    ...tseslint.configs.stylisticTypeChecked,
-  ],
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
+- 🧑‍💻 Fully responsive and mobile-friendly layout
+- 🎨 Sleek, minimal UI with dark mode styling
+- 💌 Contact form integration via **Formspree**
+- ⚡ Smooth animations using **Framer Motion**
+- 🔗 Social media links with glowing hover effects
+- 🧭 Easy navigation through smooth scroll and section highlights
+
+---
+
+## 🛠️ Built With
+
+- **React.js** – JavaScript library for building user interfaces
+- **Vite** – Lightning-fast frontend build tool
+- **Tailwind CSS** – Utility-first CSS framework
+- **Framer Motion** – Animation library for React
+- **React Icons / Heroicons** – For scalable icons
+- **Formspree** – For functional contact form handling
+- **Netlify** – For deployment
+
+---
+
+## 📸 Sections Overview
+
+- **Hero Section**: Intro with name, title, and CTA
+- **About Me**: Brief overview of my journey and skills
+- **Projects**: Highlight of selected works (can be expanded)
+- **Contact**: A fully functional contact form with email integration
+
+---
+
+## 📬 Contact Me
+
+If you'd like to collaborate, hire me, or just want to say hi, feel free to drop a message via the contact form or connect on LinkedIn.
+
+- 📧 Email: [sadmanarafin2@gmail.com](mailto:sadmanarafin2@gmail.com)
+- 🌐 Portfolio: [portfolio-supto.netlify.app](https://portfolio-supto.netlify.app/)
+- 🔗 LinkedIn: [linkedin.com/in/codewithsupto](https://www.linkedin.com/in/codewithsupto/)
+- 💻 GitHub: [github.com/supto707](https://github.com/supto707)
+
+---
+
+## 🧪 Run Locally
+
+```bash
+git clone https://github.com/supto707/your-repo-name.git
+cd your-repo-name
+npm install
+npm run dev
 ```
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+> Make sure you have Node.js and Vite installed.
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+---
 
-export default tseslint.config({
-  plugins: {
-    // Add the react-x and react-dom plugins
-    'react-x': reactX,
-    'react-dom': reactDom,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended typescript rules
-    ...reactX.configs['recommended-typescript'].rules,
-    ...reactDom.configs.recommended.rules,
-  },
-})
-```
+## 📄 License
+
+This project is open-source and available under the [MIT License](LICENSE).
+
+---
+
+Made with ❤️ by **Sadman Arefin**
