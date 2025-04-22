@@ -5,17 +5,17 @@ const skillCategories = [
   {
     title: 'Frontend',
     icon: CodeBracketIcon,
-    skills: ['React', 'TypeScript', 'JavaScript', 'HTML/CSS', 'Tailwind'],
+    skills: ['React', 'TypeScript', 'JavaScript', 'HTML/CSS', 'Tailwind', 'Next.js' , 'FlyonUI', 'Vercel', 'Framer Motion'],
   },
   {
     title: 'Backend',
     icon: ServerIcon,
-    skills: ['GoLang', 'Python', 'Node.js'],
+    skills: ['GoLang', 'Python', 'Node.js', 'MongoDB', 'Express.js', 'Firebase', 'REST API'],
   },
   {
     title: 'Tools',
     icon: WrenchScrewdriverIcon,
-    skills: ['Git', 'VS Code', 'Docker', 'Figma'],
+    skills: ['Git', 'VS Code', 'Figma', 'Postman', 'Notion', 'Adobe XD'],
   },
 ];
 
