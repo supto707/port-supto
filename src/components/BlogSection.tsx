@@ -1,5 +1,5 @@
 import { motion } from 'framer-motion';
-import { ClockIcon, TagIcon } from '@heroicons/react/24/outline';
+import { ClockIcon} from '@heroicons/react/24/outline';
 
 const blogPosts = [
   {
