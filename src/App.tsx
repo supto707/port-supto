@@ -7,6 +7,9 @@ import ProjectsSection from './components/ProjectsSection';
 import ExperienceSection from './components/ExperienceSection';
 import EducationSection from './components/EducationSection';
 import ContactSection from './components/ContactSection';
+import TestimonialsSection from './components/TestimonialsSection';
+import BlogSection from './components/BlogSection';
+import Footer from './components/Footer';
 
 function App() {
   return (
@@ -25,6 +28,9 @@ function App() {
           <ExperienceSection />
           <EducationSection />
           <ContactSection />
+          <TestimonialsSection />
+          <BlogSection />
+          <Footer />
         </motion.div>
       </main>
     </div>
