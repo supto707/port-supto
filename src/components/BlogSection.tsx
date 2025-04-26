@@ -34,7 +34,8 @@ const BlogSection = () => {
       <motion.h2
         initial={{ opacity: 0, y: 20 }}
         whileInView={{ opacity: 1, y: 0 }}
-        viewport={{ once: true }}
+        exit={{ opacity: 0, y: -20 }}
+        viewport={{ once: false }}
         className="section-title text-center"
       >
         Latest Blog Posts
@@ -46,7 +47,8 @@ const BlogSection = () => {
             key={post.title}
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
+            exit={{ opacity: 0, y: -20 }}
+            viewport={{ once: false }}
             transition={{ delay: index * 0.2 }}
             className="card group hover:scale-105 transition-transform duration-300"
           >

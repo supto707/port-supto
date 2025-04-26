@@ -28,7 +28,8 @@ const ExperienceSection = () => {
       <motion.h2
         initial={{ opacity: 0, y: 20 }}
         whileInView={{ opacity: 1, y: 0 }}
-        viewport={{ once: true }}
+        viewport={{ once: false }}
+        exit={{ opacity: 0, y: -20 }}
         className="section-title text-center"
       >
         Professional Experience
@@ -43,7 +44,8 @@ const ExperienceSection = () => {
             key={experience.title}
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
+            viewport={{ once: false }}
+            exit={{ opacity: 0, y: -20 }}
             transition={{ delay: index * 0.2 }}
             className={`relative flex flex-col md:flex-row gap-8 mb-12 ${index % 2 === 0 ? 'md:flex-row-reverse' : ''}`}
           >

@@ -20,6 +20,7 @@ const HeroSection = () => {
           <motion.h1
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
+            exit={{ opacity: 0, y: -20 }}
             transition={{ duration: 0.5 }}
             className="text-4xl md:text-6xl font-bold font-poppins mb-6"
           >
@@ -30,6 +31,7 @@ const HeroSection = () => {
           <motion.p
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
+            exit={{ opacity: 0, y: -20 }}
             transition={{ duration: 0.5, delay: 0.2 }}
             className="text-xl md:text-2xl text-gray-300 mb-12"
           >
@@ -39,6 +41,7 @@ const HeroSection = () => {
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
+            exit={{ opacity: 0, y: -20 }}
             transition={{ duration: 0.5, delay: 0.4 }}
             className="flex flex-col sm:flex-row gap-4"
           >
@@ -62,6 +65,7 @@ const HeroSection = () => {
           className="md:order-2 order-1 flex justify-center"
           initial={{ opacity: 0, scale: 0.5 }}
           animate={{ opacity: 1, scale: 1 }}
+          exit={{ opacity: 0, scale: 0.5 }}
           transition={{ duration: 0.5 }}
         >
           <div className="relative w-64 h-64 md:w-80 md:h-80">

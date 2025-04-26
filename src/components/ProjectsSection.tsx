@@ -34,7 +34,8 @@ const ProjectsSection = () => {
       <motion.h2
         initial={{ opacity: 0, y: 20 }}
         whileInView={{ opacity: 1, y: 0 }}
-        viewport={{ once: true }}
+        viewport={{ once: false }}
+        exit={{ opacity: 0, y: -20 }}
         className="section-title text-center"
       >
         Featured Projects
@@ -46,7 +47,8 @@ const ProjectsSection = () => {
             key={project.title}
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
+            viewport={{ once: false }}
+            exit={{ opacity: 0, y: -20 }}
             transition={{ delay: index * 0.2 }}
             className="card group"
           >
