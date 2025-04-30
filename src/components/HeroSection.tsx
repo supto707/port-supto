@@ -1,7 +1,7 @@
 import { motion } from 'framer-motion';
 import { ArrowDownTrayIcon, ChatBubbleBottomCenterTextIcon } from '@heroicons/react/24/outline';
 import profileImg from '../assets/profile.png';
-import CV from '../assets/CV SUPTO FINAL.pdf';
+ import CV from '../assets/CV SUPTO FINAL.pdf';
 
 const HeroSection = () => {
   const scrollToContact = () => {
@@ -14,7 +14,7 @@ const HeroSection = () => {
   };
 
   return (
-    <section className="min-h-screen flex items-center justify-center px-4 py-20">
+    <section className="min-h-[85vh] flex items-center justify-center px-4 py-12 relative">
       <div className="max-w-6xl mx-auto w-full grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
         <div className="text-left md:order-1 order-2">
           <motion.h1

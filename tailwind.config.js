@@ -10,7 +10,14 @@ export default {
         primary: '#14B8A6',
         accent: '#38BDF8',
         hover: '#A78BFA',
-        background: '#0F172A',
+        background: {
+          light: '#f8fafc',
+          dark: '#0F172A'
+        },
+        text: {
+          light: '#1e293b',
+          dark: '#f8fafc'
+        }
       },
       fontFamily: {
         inter: ['Inter', 'sans-serif'],

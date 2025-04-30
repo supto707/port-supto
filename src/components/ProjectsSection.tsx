@@ -1,14 +1,24 @@
 import { motion } from 'framer-motion';
 import { ArrowTopRightOnSquareIcon, CodeBracketIcon } from '@heroicons/react/24/outline';
+import { useState, useEffect } from 'react';
 
-const projects = [
+interface Project {
+  title: string;
+  description: string;
+  stack: string[];
+  image: string;
+  demoUrl: string;
+  githubUrl: string;
+}
+
+const fallbackProjects: Project[] = [
   {
     title: 'E-Commerce Dashboard',
     description: 'A modern e-commerce analytics dashboard with real-time sales tracking and inventory management.',
-    stack: ['React', 'TypeScript', 'Tailwind'],
+    stack: ['Javascript', 'Golang', 'Tailwind'],
     image: 'https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&w=800&q=80',
-    demoUrl: '#',
-    githubUrl: '#',
+    demoUrl: 'https://go-dashboard-5hi6.onrender.com',
+    githubUrl: 'https://github.com/supto707/todo-golang',
   },
   {
     title: 'AI Content Generator',
@@ -29,6 +39,57 @@ const projects = [
 ];
 
 const ProjectsSection = () => {
+  const [projects, setProjects] = useState<Project[]>(fallbackProjects);
+  const [loading, setLoading] = useState(true);
+  const [error, setError] = useState('');
+
+  useEffect(() => {
+    const fetchGithubProjects = async () => {
+      try {
+        const response = await fetch(
+          'https://api.github.com/users/sadmanarefin/repos?sort=updated&per_page=3'
+        );
+        const data = await response.json();
+
+        if (Array.isArray(data)) {
+          const formattedProjects = await Promise.all(data.map(async (repo) => {
+            // Fetch languages for each repository
+            const languagesResponse = await fetch(repo.languages_url);
+            const languages = await languagesResponse.json();
+
+            return {
+              title: repo.name,
+              description: repo.description || 'A cool project by Sadman Arefin',
+              stack: Object.keys(languages).slice(0, 3),
+              image: `https://opengraph.githubassets.com/1/${repo.full_name}`,
+              demoUrl: repo.homepage || 'https://go-dashboard-5hi6.onrender.com',
+              githubUrl: repo.html_url
+            };
+          }));
+          setProjects(formattedProjects);
+        }
+      } catch (err) {
+        setError('Failed to fetch projects');
+        console.error('Error fetching GitHub projects:', err);
+      } finally {
+        setLoading(false);
+      }
+    };
+
+    fetchGithubProjects();
+  }, []);
+
+  if (loading) {
+    return (
+      <section className="py-20 px-4 max-w-6xl mx-auto" id="projects">
+        <h2 className="section-title text-center">Featured Projects</h2>
+        <div className="flex justify-center items-center h-64">
+          <div className="animate-spin rounded-full h-12 w-12 border-t-2 border-b-2 border-accent"></div>
+        </div>
+      </section>
+    );
+  }
+
   return (
     <section className="py-20 px-4 max-w-6xl mx-auto" id="projects">
       <motion.h2
