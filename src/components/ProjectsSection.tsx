@@ -90,6 +90,17 @@ const ProjectsSection = () => {
     );
   }
 
+  if (error) {
+    return (
+      <section className="py-20 px-4 max-w-6xl mx-auto" id="projects">
+        <h2 className="section-title text-center">Featured Projects</h2>
+        <div className="flex justify-center items-center h-64 text-red-500">
+          <p>{error}</p>
+        </div>
+      </section>
+    );
+  }
+
   return (
     <section className="py-20 px-4 max-w-6xl mx-auto" id="projects">
       <motion.h2
