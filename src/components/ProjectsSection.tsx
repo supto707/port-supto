@@ -47,7 +47,7 @@ const ProjectsSection = () => {
     const fetchGithubProjects = async () => {
       try {
         const response = await fetch(
-          'https://api.github.com/users/sadmanarefin/repos?sort=updated&per_page=3'
+          'https://api.github.com/users/supto707/repos?sort=updated&per_page=3'
         );
         const data = await response.json();
 
